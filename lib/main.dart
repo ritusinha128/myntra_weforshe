@@ -54,7 +54,7 @@ class App extends StatelessWidget {
       routes: {
         Login.routeName: (ctx) => Login(),
         Otp.routeName: (ctx) => Otp(),
-        HomeScreen.routeName: (ctx) => HomeScreen(null),
+        HomeScreen.routeName: (ctx) => HomeScreen(this.uri),
         ProductList.routeName: (ctx) => ProductList(),
         ProductDetails.routeName: (ctx) => ProductDetails(),
         CardDemo.routeName: (ctx) => CardDemo(),
