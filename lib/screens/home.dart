@@ -49,7 +49,7 @@ class Home extends StatelessWidget {
                         color: Colors.black,
                       ),
                       onPressed: () => Share.share(
-                          'Hey! Please help me with my wishlist. LINK HERE '),
+                          'Hey! Please help me with my wishlist. https://new-flutter-universal-link.herokuapp.com/page1 '),
                     ),
                     IconButton(
                       icon: Icon(
