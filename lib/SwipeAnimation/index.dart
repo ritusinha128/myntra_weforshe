@@ -1,11 +1,11 @@
 import 'dart:async';
-import 'package:flutter_myntra_clone/SwipeAnimation/data.dart';
-import 'package:flutter_myntra_clone/SwipeAnimation/dummyCard.dart';
-import 'package:flutter_myntra_clone/SwipeAnimation/activeCard.dart';
 
 //import 'package:animation_exp/PageReveal/page_main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
+import 'package:flutter_myntra_clone/SwipeAnimation/activeCard.dart';
+import 'package:flutter_myntra_clone/SwipeAnimation/data.dart';
+import 'package:flutter_myntra_clone/SwipeAnimation/dummyCard.dart';
 import 'package:flutter_myntra_clone/screens/home_screen.dart';
 
 class CardDemo extends StatefulWidget {
@@ -133,8 +133,6 @@ class CardDemoState extends State<CardDemo> with TickerProviderStateMixin {
           elevation: 0.0,
           backgroundColor: Colors.white,
           centerTitle: true,
-
-
           title: new Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -192,23 +190,23 @@ class CardDemoState extends State<CardDemo> with TickerProviderStateMixin {
                     }
                   }).toList())
               : new InkWell(
-            onTap: () {
-              Navigator.of(context).pushNamed(HomeScreen.routeName);
-            },
-            child : new Container (
-            height: 80.0,
-            width: 200.0,
-            alignment: Alignment.center,
-            decoration: new BoxDecoration(
-              color: Colors.white,
-              borderRadius:
-              new BorderRadius.circular(60.0),
-            ),
-            child: new Text(
-              "No more outfits. GO BACK HOME",
-              style: new TextStyle(color: Colors.pinkAccent),
-            ),
-          ),),
+                  onTap: () {
+                    Navigator.of(context).pushNamed(HomeScreen.routeName);
+                  },
+                  child: new Container(
+                    height: 80.0,
+                    width: 200.0,
+                    alignment: Alignment.center,
+                    decoration: new BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: new BorderRadius.circular(60.0),
+                    ),
+                    child: new Text(
+                      "No more outfits. GO BACK HOME",
+                      style: new TextStyle(color: Colors.pinkAccent),
+                    ),
+                  ),
+                ),
         )));
   }
 }

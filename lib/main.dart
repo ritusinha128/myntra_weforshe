@@ -20,14 +20,14 @@ class App extends StatelessWidget {
         primaryColor: Colors.pinkAccent,
         accentColor: Colors.white,
       ),
-      home: Login(),
+      home: HomeScreen(),
       routes: {
         Login.routeName: (ctx) => Login(),
         Otp.routeName: (ctx) => Otp(),
         HomeScreen.routeName: (ctx) => HomeScreen(),
         ProductList.routeName: (ctx) => ProductList(),
         ProductDetails.routeName: (ctx) => ProductDetails(),
-        CardDemo.routeName : (ctx) => CardDemo(),
+        CardDemo.routeName: (ctx) => CardDemo(),
       },
     );
   }
