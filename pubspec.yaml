@@ -65,6 +65,7 @@ flutter:
     - assets/avatars/avatar-4.jpg
     - assets/avatars/avatar-5.jpg
     - assets/avatars/avatar-6.jpg
+    - assets/icons/Trash.svg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
