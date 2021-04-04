@@ -13,40 +13,55 @@ class AddWishlist extends StatefulWidget {
 }
 
 class AddWishlistState extends State<AddWishlist> {
-  final List<String> names = <String>[];
+  final List<String> names = <String>["Friends1"];
 
   TextEditingController nameController = TextEditingController();
-  int _selectedPageIndex = 0;
 
 
-  void _selectTab(int index) {
-    setState(() {
-      _selectedPageIndex = index;
-    });
+  Future<void> createDialogToAdd (BuildContext context) async {
+    return showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: Text('Add new wishlist'),
+            content: TextField(
+              onChanged: (value) {
+                setState(() {
+                  valueText = value;
+                });
+              },
+              controller: nameController,
+              decoration: InputDecoration(hintText: "Wishlist Name"),
+            ),
+            actions: <Widget>[
+              FlatButton(
+                color: Colors.red,
+                textColor: Colors.white,
+                child: Text('CANCEL'),
+                onPressed: () {
+                  setState(() {
+                    Navigator.pop(context);
+                  });
+                },
+              ),
+              FlatButton(
+                color: Colors.green,
+                textColor: Colors.white,
+                child: Text('OK'),
+                onPressed: () {
+                  nameController.text = valueText;
+                  setState(() {
+                    names.insert(0,nameController.text);
+                    Navigator.pop(context);
+                  });
+                },
+              ),
+            ],
+          );
+        });
   }
 
-  Map<String, Object> _getPage() {
-    final List<Map<String, Object>> _pages = [
-      {
-        'page': Home(),
-      },
-      {
-        'page': Categories(),
-      },
-      {
-        'page': CardDemo(),
-      },
-      {
-        'page': Text(''),
-      },
-      {
-        'page': Text(''),
-      }
-    ];
-
-    return _pages[_selectedPageIndex];
-  }
-
+String valueText;
   void addItemToList(){
     setState(() {
       names.insert(0,nameController.text);
@@ -82,25 +97,9 @@ class AddWishlistState extends State<AddWishlist> {
             ),
           ],
         ),
-        body: Column(
+       body: Column(
             children: <Widget>[
-              Padding(
-                padding: EdgeInsets.all(20),
-                child: TextField(
-                  controller: nameController,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Wishlist Name',
-                  ),
-                ),
-              ),
-              ButtonTheme(
-                child: new PrimaryButton(
-                  title: 'Add',
-                  onPressed: () {
-                    addItemToList();
-                  },
-                ),),
+
               Expanded(
                   child: ListView.builder(
                       padding: const EdgeInsets.all(8),
@@ -140,7 +139,14 @@ class AddWishlistState extends State<AddWishlist> {
                   )
               )
             ]
-        )
+        ),
+
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add, color: Colors.white,),
+        onPressed: () =>  { createDialogToAdd(context) },
+        backgroundColor: Colors.pinkAccent,
+      ),
     );
+
   }
   }
