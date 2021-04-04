@@ -3,6 +3,8 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_myntra_clone/SwipeAnimation/index.dart';
 import 'package:flutter_myntra_clone/screens/categories/categories.dart';
 import 'package:flutter_myntra_clone/screens/home.dart';
+import 'package:flutter_myntra_clone/screens/products/product_details.dart';
+import 'package:flutter_myntra_clone/screens/wishlists/wishlist_card.dart';
 
 class HomeScreen extends StatefulWidget {
   static const routeName = '/home';
@@ -37,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
         'page': CardDemo(),
       },
       {
-        'page': Text(''),
+        'page': WishListCard(),
       },
       {
         'page': Text(''),
