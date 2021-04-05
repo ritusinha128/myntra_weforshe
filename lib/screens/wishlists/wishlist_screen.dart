@@ -22,6 +22,7 @@ class  WishListScreenState extends State< WishListScreen> {
   WishListScreenState(this.wishlist_title);
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(
