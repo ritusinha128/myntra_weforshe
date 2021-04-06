@@ -48,56 +48,47 @@ Positioned cardDemoDummy(
                   children: <Widget>[
                     new FlatButton(
                         padding: new EdgeInsets.all(0.0),
-
                         child: new Container(
                           height: 60.0,
                           width: 90.0,
                           alignment: Alignment.center,
                           decoration: new BoxDecoration(
                             color: Colors.white,
-                            borderRadius:
-                            new BorderRadius.circular(60.0),
+                            borderRadius: new BorderRadius.circular(60.0),
+                          ),
+                          child: new Icon(Icons.close,
+                              color: Colors.black, size: 50.0),
+                        )),
+                    new FlatButton(
+                        padding: new EdgeInsets.all(0.0),
+                        child: new Container(
+                          height: 60.0,
+                          width: 90.0,
+                          alignment: Alignment.center,
+                          decoration: new BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: new BorderRadius.circular(60.0),
                           ),
                           child: new Icon(
-                              Icons.close,
-                              color: Colors.black,
-                              size : 24.0
-                          ),
-                        )),
-                    new FlatButton(
-                        padding: new EdgeInsets.all(0.0),
-
-                        child: new Container(
-                          height: 60.0,
-                          width: 90.0,
-                          alignment: Alignment.center,
-                          decoration: new BoxDecoration(
-                            color: Colors.white,
-                            borderRadius:
-                            new BorderRadius.circular(60.0),
-                          ),
-                          child: new Icon (
                             Icons.favorite,
                             color: Colors.pink,
-                            size: 24.0,
+                            size: 50.0,
                           ),
                         )),
                     new FlatButton(
                         padding: new EdgeInsets.all(0.0),
-
                         child: new Container(
                           height: 60.0,
                           width: 90.0,
                           alignment: Alignment.center,
                           decoration: new BoxDecoration(
                             color: Colors.white,
-                            borderRadius:
-                            new BorderRadius.circular(60.0),
+                            borderRadius: new BorderRadius.circular(60.0),
                           ),
-                          child: new Icon (
+                          child: new Icon(
                             Icons.star,
                             color: Colors.blue,
-                            size: 24.0,
+                            size: 50.0,
                           ),
                         ))
                   ],

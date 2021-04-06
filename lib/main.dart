@@ -9,10 +9,7 @@ import 'package:flutter_myntra_clone/screens/login/otp.dart';
 import 'package:flutter_myntra_clone/screens/products/product_details.dart';
 import 'package:flutter_myntra_clone/screens/products/product_list.dart';
 import 'package:flutter_myntra_clone/screens/wishlists/add_wishlists.dart';
-import 'package:flutter_myntra_clone/screens/wishlists/wishlist_card.dart';
-import 'package:flutter_myntra_clone/screens/wishlists/wishlist_screen.dart';
 import 'package:uni_links/uni_links.dart' as UniLink;
-
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -63,8 +60,6 @@ class App extends StatelessWidget {
         ProductDetails.routeName: (ctx) => ProductDetails(),
         CardDemo.routeName: (ctx) => CardDemo(),
         AddWishlist.routeName: (ctx) => AddWishlist(),
-        WishListCard.routeName: (ctx) => WishListCard(),
-        WishListScreen.routeName: (ctx) => WishListScreen(),
       },
     );
   }
