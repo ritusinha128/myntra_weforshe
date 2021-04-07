@@ -84,10 +84,19 @@ class  WishListScreenState extends State< WishListScreen> {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        child :new PrimaryButton(
-          title: "SHARE THIS WISHLIST",
-          onPressed: () => Share.share(
-              'Hey! Please help me with my wishlist. https://new-flutter-universal-link.herokuapp.com/page1 '),
+        child : new Row (
+          children: [
+            new PrimaryButton(
+              title: "SHARE WITH FRIENDS",
+              onPressed: () => Share.share(
+                  'Hey! Please help me with my wishlist. https://new-flutter-universal-link.herokuapp.com/page1 '),
+            ),
+            Spacer(),
+            new PrimaryButton(
+              title: "GET REVIEWED",
+              onPressed: () => {}
+            ),
+          ],
         ),
         ),
       );
