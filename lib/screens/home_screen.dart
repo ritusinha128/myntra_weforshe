@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_myntra_clone/SwipeAnimation/index.dart';
 import 'package:flutter_myntra_clone/screens/categories/categories.dart';
 import 'package:flutter_myntra_clone/screens/home.dart';
+
+Future<int> getIndex() {}
 
 class HomeScreen extends StatefulWidget {
   static const routeName = '/home';
@@ -49,18 +50,15 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    SchedulerBinding.instance.addPostFrameCallback((_) {
-      // take action according to data uri
-      if (widget.uri != null) {
-        List<String> splitted = widget.uri.toString().split('/');
-        print(splitted[splitted.length - 1]);
-        if (splitted[splitted.length - 1] == 'page1') {
-          _selectedPageIndex = 2;
-        }
-        // Navigator.push(
-        //     context, MaterialPageRoute(builder: (context) => CardDemo()));
+    if (widget.uri != null) {
+      List<String> splitted = widget.uri.toString().split('/');
+      print(widget.uri);
+      print(splitted[splitted.length - 1]);
+      if (splitted[splitted.length - 1] == "page1") {
+        _selectedPageIndex = 2;
+        print(_selectedPageIndex);
       }
-    });
+    }
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectTab,
