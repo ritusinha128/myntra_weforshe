@@ -115,7 +115,7 @@ class WishListCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.star, size: 45.0, color: Colors.yellow),
+                    Icon(Icons.star, size: 45.0, color: Colors.blue),
                     Text("4")
                   ],
                 ),
