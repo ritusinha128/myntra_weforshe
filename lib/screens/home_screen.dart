@@ -37,10 +37,10 @@ class _HomeScreenState extends State<HomeScreen> {
         'page': CardDemo(),
       },
       {
-        'page': Text(''),
+        'page': Center(child: Text('Come back later.')),
       },
       {
-        'page': Text(''),
+        'page': Center(child: Text('Come back later.')),
       }
     ];
 
