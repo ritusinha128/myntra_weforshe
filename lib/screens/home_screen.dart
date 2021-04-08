@@ -3,7 +3,6 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_myntra_clone/SwipeAnimation/index.dart';
 import 'package:flutter_myntra_clone/screens/categories/categories.dart';
 import 'package:flutter_myntra_clone/screens/home.dart';
-import 'package:flutter_myntra_clone/screens/wishlists/wishlist_card.dart';
 
 class HomeScreen extends StatefulWidget {
   static const routeName = '/home';
@@ -38,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
         'page': CardDemo(),
       },
       {
-        'page': WishListCard(),
+        'page': Text(''),
       },
       {
         'page': Text(''),
@@ -54,11 +53,11 @@ class _HomeScreenState extends State<HomeScreen> {
       // take action according to data uri
       if (widget.uri != null) {
         List<String> splitted = widget.uri.toString().split('/');
-        print (splitted[splitted.length - 1]);
+        print(splitted[splitted.length - 1]);
         if (splitted[splitted.length - 1] == 'page1') {
           _selectedPageIndex = 2;
         }
-       // Navigator.push(
+        // Navigator.push(
         //     context, MaterialPageRoute(builder: (context) => CardDemo()));
       }
     });

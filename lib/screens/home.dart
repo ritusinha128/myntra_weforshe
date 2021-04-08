@@ -4,7 +4,6 @@ import 'package:flutter_myntra_clone/data_provider/home_data.dart';
 import 'package:flutter_myntra_clone/screens/wishlists/add_wishlists.dart';
 import 'package:flutter_myntra_clone/utils/asset_constants.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:share/share.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -49,17 +48,16 @@ class Home extends StatelessWidget {
                         Icons.favorite_border,
                         color: Colors.black,
                       ),
-                      onPressed: () =>{
+                      onPressed: () => {
                         Navigator.of(context).pushNamed(AddWishlist.routeName)
-                      },),
+                      },
+                    ),
                     IconButton(
                       icon: Icon(
                         Icons.shopping_bag_outlined,
                         color: Colors.black,
                       ),
-                      onPressed: () =>{
-
-                      },
+                      onPressed: () => {},
                     ),
                   ],
                 ),
